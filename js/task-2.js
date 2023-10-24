@@ -1,3 +1,4 @@
+"use strict";
 function getShippingMessage(country, price, deliveryFee) {
   if (
     typeof price !== "number" ||

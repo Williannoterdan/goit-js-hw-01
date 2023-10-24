@@ -1,3 +1,4 @@
+"use strict";
 function makeTransaction(quantity, pricePerDroid) {
   // Умова на випадок дивних значень
   if (quantity < 0 || pricePerDroid < 0) {
