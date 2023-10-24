@@ -1,20 +1,13 @@
-function getShippingMessage(country ,price ,deliveryFee ){
-    const countryLong = country.length; 
-        // Умови на випадок дивних значень
-    if( typeof price !== 'number' ){
-        return`Sorry there was an error in (price)`
-    }
-    if(typeof deliveryFee !== 'number'){
-        return `Sorry there was an error in (delivery prices)`
-    }
-    if(typeof country !=='string' || countryLong <= 3 ){
-        return `country (${country}) is not known, try another one`;
-    }
-    const totalPrice = price + deliveryFee;
-    if (totalPrice< 0){
-        return `Sorry for the problem with the price calculation`;
-    }
-    return `Shipping to ${country} will cost ${totalPrice} credits`
+function getShippingMessage(country, price, deliveryFee) {
+  if (
+    typeof price !== "number" ||
+    typeof deliveryFee !== "number" ||
+    typeof country !== "string"
+  ) {
+    return `Sorry there was an error `;
+  }
+  const totalPrice = price + deliveryFee;
+  return `Shipping to ${country} will cost ${totalPrice} credits`;
 }
 
 console.log(getShippingMessage("Australia", 120, 50));

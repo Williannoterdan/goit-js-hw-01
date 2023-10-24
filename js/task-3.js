@@ -1,6 +1,6 @@
 function getElementWidth(content, padding, border) {
   contentLegth =
-    Number.parseFloat(content) + `e2     31`
+    Number.parseFloat(content) +
     2 * (Number.parseFloat(padding) + Number.parseFloat(border));
   if (contentLegth < 0) {
     return `Eror`;
